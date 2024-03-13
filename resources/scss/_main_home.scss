@@ -1,0 +1,68 @@
+main {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  background-color: #1c1c1c;
+
+  .label {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #0282f9;
+  padding: 10px 25px;
+  position: relative;
+  top: -40px;
+  left: 0;
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    text-align: center;
+    padding: 12px 40px;
+    background-color: #0282f9;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+}
+
+.card {
+    flex-basis: calc(100% / 6);
+    padding: 1rem 1rem;
+
+      figure {
+        height: 170px;
+        width: 168px;
+
+      }
+
+      img {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        
+      }
+
+      p {
+        font-size: .9rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+      }
+
+  }
+
+

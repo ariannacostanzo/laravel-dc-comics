@@ -1,0 +1,31 @@
+#bonus {
+color: white;
+  background-color: #0282f9;
+  font-size: .8rem;
+  padding: 3rem 0;
+  text-transform: uppercase;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  a {
+    color: white;
+    text-transform: uppercase;
+  }
+}

@@ -1,1 +1,9 @@
-@import '~bootstrap/scss/bootstrap';
+@use 'reset';
+@use 'generics';
+@use 'utils';
+@use 'header';
+@use 'jumbotron';
+@use 'footer';
+@use 'bonus';
+@use 'main_home';
+@use 'comic_details';
