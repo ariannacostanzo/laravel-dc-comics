@@ -1,7 +1,7 @@
 <?php return [
     [
         'text' => 'Characters',
-        'url' => 'home',
+        'url' => 'characters.index',
         'current' => false,
     ],
     [
@@ -11,42 +11,42 @@
     ],
     [
         'text' => 'Movies',
-        'url' => 'home',
+        'url' => 'movies.index',
         'current' => false,
     ],
     [
         'text' => 'TV',
-        'url' => 'home',
+        'url' => 'tv.index',
         'current' => false,
     ],
     [
         'text' => 'Games',
-        'url' => 'home',
+        'url' => 'games.index',
         'current' => false,
     ],
     [
         'text' => 'Collectibles',
-        'url' => 'home',
+        'url' => 'collectibles.index',
         'current' => false,
     ],
     [
         'text' => 'Videos',
-        'url' => 'home',
+        'url' => 'videos.index',
         'current' => false,
     ],
     [
         'text' => 'Fans',
-        'url' => 'home',
+        'url' => 'fans.index',
         'current' => false,
     ],
     [
         'text' => 'News',
-        'url' => 'home',
+        'url' => 'news.index',
         'current' => false,
     ],
     [
         'text' => 'Shop',
-        'url' => 'home',
+        'url' => 'shop.index',
         'current' => false,
     ],
 ];
