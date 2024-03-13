@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DC Comics | @yield('title')</title>
     <link rel="icon" href="{{Vite::asset('resources/img/favicon.ico')}}" >
+    <style>body {visibility: hidden}</style>
     @vite('resources/js/app.js')
     {{-- google fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

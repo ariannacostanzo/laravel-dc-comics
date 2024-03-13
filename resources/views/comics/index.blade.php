@@ -16,10 +16,10 @@
                 <div class="card">
                     <figure>
                       <a href="{{url("/comic/$index")}}">
-                        <img src="{{$card['thumb'] }}" :alt="{{$card['series']}}">
+                        <img src="{{$card->thumb }}" :alt="{{$card->series}}">
                       </a>
                     </figure>
-                    <p>{{$card['series']}}</p>
+                    <p>{{$card->series}}</p>
                 </div>
             @endforeach
         </div> --}}
