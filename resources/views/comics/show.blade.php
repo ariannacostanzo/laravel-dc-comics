@@ -1,6 +1,10 @@
 @extends('layouts.main')
 
-@section('title', $comic['series'])
+@section('title', $comic->title)
+
+@section('cdns')
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' integrity='sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==' crossorigin='anonymous'/>
+@endsection
 
 @section('main-content')
 <div class="blue-line"></div>
@@ -19,7 +23,7 @@
                     <p>U.S.Price: <span>{{$comic->price}}</span></p>
                     <p>AVAILABLE </p>
                 </div>
-                <div class="comic-availability">Check Availability &#11167;</div>
+                <div class="comic-availability">Check Availability <i class="fa-solid fa-sort-down"></i></div>
             </div>
             <p class="comic-info-description">{{$comic->description}}</p>
         </div>
@@ -37,13 +41,13 @@
         <div class="specialties-container">
             <p>Art by:</p>
             <div class="specialties-list">
-                <span>{{$comic->artists}}</span>
+                <span>{{$comic->artists}}.</span>
             </div>   
         </div>
         <div class="specialties-container">
             <p>Written by:</p>
             <div class="specialties-list">
-                <span>{{$comic->writers}}</span>
+                <span>{{$comic->writers}}.</span>
             </div>   
         </div>
         </div> 

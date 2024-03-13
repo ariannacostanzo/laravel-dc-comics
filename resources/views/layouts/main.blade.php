@@ -7,7 +7,9 @@
     <title>DC Comics | @yield('title')</title>
     <link rel="icon" href="{{Vite::asset('resources/img/favicon.ico')}}" >
     <style>body {visibility: hidden}</style>
+    @yield('cdns')
     @vite('resources/js/app.js')
+    
     {{-- google fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
