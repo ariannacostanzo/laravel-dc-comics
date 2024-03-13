@@ -24,11 +24,11 @@
     <figure id="jumbotron">
         <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="jumbotron">
     </figure>
-     {{-- jumbotron --}}
+    {{-- jumbotron --}}
 
-     {{-- main --}}
-     @yield('main-content')
-     {{-- main --}}
+    {{-- main --}}
+    @yield('main-content')
+    {{-- main --}}
 
     {{-- bonus --}}
     @yield('bonus')

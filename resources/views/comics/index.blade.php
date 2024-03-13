@@ -12,7 +12,7 @@
           </span>
 
         <div class="row">
-            @foreach ($comics as $index => $comic)
+            @forelse ($comics as $comic)
                 <div class="card">
                     <figure>
                       <a href="{{route('comics.show', $comic->id)}}">
@@ -21,7 +21,9 @@
                     </figure>
                     <p>{{$comic->series}}</p>
                 </div>
-            @endforeach
+              @empty
+              Non ci sono fumetti da mostrare
+            @endforelse
         </div>
         
         <div class="btn-div">
