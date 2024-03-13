@@ -11,18 +11,18 @@
             current series
           </span>
 
-        {{-- <div class="row">
-            @foreach ($cards as $index => $card)
+        <div class="row">
+            @foreach ($comics as $index => $comic)
                 <div class="card">
                     <figure>
-                      <a href="{{url("/comic/$index")}}">
-                        <img src="{{$card->thumb }}" :alt="{{$card->series}}">
+                      <a href="{{route('comics.show', $comic->id)}}">
+                        <img src="{{$comic->thumb }}" :alt="{{$comic->series}}">
                       </a>
                     </figure>
-                    <p>{{$card->series}}</p>
+                    <p>{{$comic->series}}</p>
                 </div>
             @endforeach
-        </div> --}}
+        </div>
         
         <div class="btn-div">
           <button>LOAD MORE</button>
