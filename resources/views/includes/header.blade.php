@@ -6,7 +6,7 @@
         <nav>
             <ul>
                 @foreach (config('header_nav') as $nav)
-                    <li><a href="{{ url($nav['url']) }}" class="{{ $nav['current'] ? 'active' : '' }}">{{ $nav['text'] }}</a></li>
+                    <li><a href="{{ route($nav['url']) }}" class=" @if (Route::is($nav['url'])) active @endif">{{ $nav['text'] }}</a></li>
                 @endforeach
                 {{-- <li><a href="{{route('characters')}}" class="{{ Route::is('characters') ? 'active' : '' }}">characters</a></li>  si poteva usare anche route is --}}
             </ul>

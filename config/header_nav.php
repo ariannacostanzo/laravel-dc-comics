@@ -1,52 +1,52 @@
 <?php return [
     [
         'text' => 'Characters',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Comics',
-        'url' => 'comics',
+        'url' => 'comics.index',
         'current' => true,
     ],
     [
         'text' => 'Movies',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'TV',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Games',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Collectibles',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Videos',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Fans',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'News',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
     [
         'text' => 'Shop',
-        'url' => '#',
+        'url' => 'home',
         'current' => false,
     ],
 ];
