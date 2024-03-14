@@ -11,8 +11,13 @@ Route::get('/', function () {
 //rotta per comics
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
+//rotta per comics create
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
 //rotta per comics show
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+
 
 //rotta statica per gli altri
 
