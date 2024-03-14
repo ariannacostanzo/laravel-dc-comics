@@ -30,8 +30,20 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //prendo tutti i dati che mi sono arrivati dal form
         $data = $request->all();
-        dd($data);
+
+        //istanzio un nuovo array associativo comic
+        $comic = new Comic();
+
+        //lo riempio con i data
+        $comic->fill($data);
+
+        //lo salvo nel database
+        $comic->save();
+
+        //redirect sulla pagina show del nuovo comic creato
+        return to_route('comics.show', $comic->id);
     }
 
     /**
