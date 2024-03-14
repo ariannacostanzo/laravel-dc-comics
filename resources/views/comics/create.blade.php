@@ -64,7 +64,7 @@
                 </div>
                 <div class="input-container">
                     <label for="writers">Writers:</label>
-                    <input type="text" class="comic-input" id="writers" name="writers" placeholder="Es.: Dan Abnett..." value="{{old('writers', '')}}">
+                    <input type="text" class="comic-input" id="writers" name="writers" placeholder="Es.: Dan Abnett, ..." value="{{old('writers', '')}}">
                 </div>
             </div>
             <div class="btn-div">
