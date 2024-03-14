@@ -2,9 +2,10 @@
 
     .form-errors {
         background-color: #f6f6f6;
-        color: #464646;
+        color: #003f5e;
         padding: 1rem 2rem;
         margin: 1rem 0;
+        border: 1px solid rgb(194, 194, 194);
 
             ul {
                 margin: 1rem 0;
@@ -13,6 +14,7 @@
             ul li {
                 font-size: 15px;
                 padding: .1rem 0;
+                color: #464646;
             }
     }
 
@@ -33,13 +35,17 @@
 
     .input-container {
         display: flex;
-        align-items: end;
+        align-items: center;
         gap: 15px;
     }
 
     .comic-input {
         padding: 10px; 
         border: 1px solid rgb(194, 194, 194);
+        
+        &:focus-within {
+            outline: 2px solid #0282f9;
+        }
     }
 
     form {

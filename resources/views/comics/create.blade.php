@@ -34,7 +34,7 @@
                 <div class="input-container">
                     <label for="thumb">Thumb:</label>
                     <input type="text" class="comic-input" id="thumb" name="thumb" placeholder="Es.: https://" value="{{old('thumb', '')}}">
-                    <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" alt="" id="placeholder-thumb" >
+                    <img src="https://bub.bh/wp-content/uploads/2018/02/image-placeholder.jpg" alt="" id="placeholder-thumb" >
                 </div>
             </div>
             <div class="input-group-container">
@@ -80,4 +80,22 @@
 
 @section('bonus')
 @include('includes.bonus')
+@endsection
+
+@section('scripts')
+<script>
+
+console.log('Ciao')
+const inputUrl = document.getElementById('thumb');
+const imgPlaceholder = document.getElementById('placeholder-thumb');
+const emptyImg = "https://bub.bh/wp-content/uploads/2018/02/image-placeholder.jpg"
+
+inputUrl.addEventListener('input', () => {
+    typedUrl = inputUrl.value;
+    imgPlaceholder.src = typedUrl ? typedUrl : emptyImg;
+
+});
+
+</script>
+
 @endsection
