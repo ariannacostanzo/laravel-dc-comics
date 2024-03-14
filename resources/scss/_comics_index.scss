@@ -26,7 +26,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  button {
+  a {
     text-align: center;
     padding: 12px 40px;
     background-color: #0282f9;
@@ -34,6 +34,7 @@ main {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    font-size: 14px;
   }
 }
 }

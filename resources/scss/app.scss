@@ -5,8 +5,8 @@
 @use 'jumbotron';
 @use 'footer';
 @use 'bonus';
-@use 'main_home';
-@use 'comic_details';
+@use 'comics_index';
+@use 'comics_show';
 
 body {
     visibility: visible;
