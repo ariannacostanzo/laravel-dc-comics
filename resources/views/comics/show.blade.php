@@ -17,15 +17,20 @@
     </figure>
     <div id="comic-info">
         <div class="comic-description">
-            <h2>{{$comic->title}}</h2>
-            <div class="comic-price-container">
-                <div class="comic-price">
-                    <p>U.S.Price: <span>{{$comic->price}}</span></p>
-                    <p>AVAILABLE </p>
+            <div>
+                <h2>{{$comic->title}}</h2>
+                <div class="comic-price-container">
+                    <div class="comic-price">
+                        <p>U.S.Price: <span>{{$comic->price}}</span></p>
+                        <p>AVAILABLE </p>
+                    </div>
+                    <div class="comic-availability">Check Availability <i class="fa-solid fa-sort-down"></i></div>
                 </div>
-                <div class="comic-availability">Check Availability <i class="fa-solid fa-sort-down"></i></div>
+                <p class="comic-info-description">{{$comic->description}}</p>
             </div>
-            <p class="comic-info-description">{{$comic->description}}</p>
+            <div class="btn-div">
+                <a href="{{route('comics.index')}}">See all comics</a>
+            </div>
         </div>
         <figure class="ad-figure">
             Advertisement
