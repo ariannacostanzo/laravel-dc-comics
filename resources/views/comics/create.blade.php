@@ -67,7 +67,7 @@
                     <input type="text" class="comic-input" id="writers" name="writers" placeholder="Es.: Dan Abnett, ..." value="{{old('writers', '')}}">
                 </div>
             </div>
-            <div class="btn-div">
+            <div class="btn-div justify-center">
                 <button>Add</button>
             </div>
         </form>

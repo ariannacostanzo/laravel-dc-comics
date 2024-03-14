@@ -1,0 +1,23 @@
+// primary button div and button/a
+
+.btn-div {
+        display: flex;
+        padding-top: 2rem;
+        align-items: center;
+
+        &.justify-center {
+            justify-content: center;
+        }
+
+        a, button{
+            text-align: center;
+            padding: 12px 40px;
+            background-color: #0282f9;
+            border: 0;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+}

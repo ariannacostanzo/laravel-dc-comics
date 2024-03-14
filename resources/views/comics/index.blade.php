@@ -26,7 +26,7 @@
             @endforelse
         </div>
         
-        <div class="btn-div">
+        <div class="btn-div justify-center">
           <a href="{{route('comics.create')}}">ADD A NEW COMIC</a>
         </div>
 
