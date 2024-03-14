@@ -7,7 +7,9 @@
 @use 'bonus';
 @use 'comics_index';
 @use 'comics_show';
+@use 'comics_create';
 
 body {
     visibility: visible;
+    background-color: #1c1c1c;
 }
