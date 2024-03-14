@@ -1,10 +1,75 @@
-#comic-creation-form form {
+#comic-creation-form  {
 
-    // label {
+    .form-errors {
+        background-color: #f6f6f6;
+        color: #464646;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
 
-    // }
+            ul {
+                margin: 1rem 0;
+            }
 
-    #placeholder {
-        width: 70px;
+            ul li {
+                font-size: 15px;
+                padding: .1rem 0;
+            }
     }
+
+    h2 {
+        color: #003f5e;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    .input-group-container {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        padding: 1rem 0;
+
+    }
+
+    .input-container {
+        display: flex;
+        align-items: end;
+        gap: 15px;
+    }
+
+    .comic-input {
+        padding: 10px; 
+        border: 1px solid rgb(194, 194, 194);
+    }
+
+    form {
+        margin: 1rem 0;
+    }
+
+    label {
+        color: #003f5e;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .btn-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button{
+            text-align: center;
+            padding: 12px 40px;
+            background-color: #0282f9;
+            border: 0;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+
+    #placeholder-thumb {
+    width: 70px;
+    }  
 }
