@@ -8,8 +8,9 @@
         <nav>
             <ul>
                 @foreach (config('header_nav') as $nav)
-                    <li><a href="{{ route($nav['url']) }}" class=" @if (Route::is($nav['url'])) active @endif">{{ $nav['text'] }}</a></li>
+                    <li><a href="{{ route($nav['route_name']) }}" class=" @if (Request::is($nav['url_resources'])) active @endif">{{ $nav['text'] }}</a></li>
                 @endforeach
+                
             </ul>
         </nav>
     </div>
