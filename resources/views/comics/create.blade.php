@@ -9,7 +9,8 @@
 
 <main  id="comic-creation-form">
     <div class="container">
-        <form action="" method="POST">
+        <form action="{{route('comics.store')}}" method="POST">
+            @csrf
             <div class="input-container">
                 <label for="title">Title</label>
                 <input type="text" class="comic-input" id="title" name="title" placeholder="Es.: Aquaman vol.4: Underworld">
