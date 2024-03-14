@@ -22,9 +22,34 @@ class ComicSeeder extends Seeder
                 "series" => "Action Comics",
                 "sale_date" => "2018-10-02",
                 "type" => "comic book",
-                "artists" => "José Luis García-López, Clay Mann, Rafael Albuquerque, Patrick Gleason, Dan Jurgens, Joe Shuster, Neal Adams, Curt Swan, John Cassaday, Olivier Coipel, Jim Lee",
-                "writers" => "Brad Meltzer, Tom King, Scott Snyder, Geoff Johns, Brian Michael Bendis, Paul Dini, Louise Simonson, Richard Donner, Marv Wolfman, Peter J. Tomasi, Dan Jurgens, Jerry Siegel, Paul Levitz",
-                    
+                "artists" => [
+                    "José Luis García-López",
+                    "Clay Mann",
+                    "Rafael Albuquerque",
+                    "Patrick Gleason",
+                    "Dan Jurgens",
+                    "Joe Shuster",
+                    "Neal Adams",
+                    "Curt Swan",
+                    "John Cassaday",
+                    "Olivier Coipel",
+                    "Jim Lee"
+                ],
+                "writers" => [
+                    "Brad Meltzer",
+                    "Tom King",
+                    "Scott Snyder",
+                    "Geoff Johns",
+                    "Brian Michael Bendis",
+                    "Paul Dini",
+                    "Louise Simonson",
+                    "Richard Donner",
+                    "Marv Wolfman",
+                    "Peter J. Tomasi",
+                    "Dan Jurgens",
+                    "Jerry Siegel",
+                    "Paul Levitz"
+                ],
             ],
             [
                 "title" => "American Vampire 1976 #1",
@@ -34,8 +59,12 @@ class ComicSeeder extends Seeder
                 "series" => "American Vampire 1976",
                 "sale_date" => "2020-10-06",
                 "type" => "comic book",
-                "artists" => "Rafael Albuquerque",
-                "writers" => "Scott Snyder",
+                "artists" => [
+                    "Rafael Albuquerque"
+                ],
+                "writers" => [
+                    "Scott Snyder"
+                ],
             ],
             [
                 "title" => "Aquaman Vol. 4: Underworld",
@@ -45,8 +74,12 @@ class ComicSeeder extends Seeder
                 "series" => "Aquaman",
                 "sale_date" => "2018-01-24",
                 "type" => "graphic novel",
-                "artists" => "Stjepan Sejic",
-                "writers" => "Dan Abnett",
+                "artists" => [
+                    "Stjepan Sejic"
+                ],
+                "writers" => [
+                    "Dan Abnett"
+                ],
             ],
             [
                 "title" => "Batgirl #1",
@@ -56,8 +89,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batgirl",
                 "sale_date" => "2016-07-27",
                 "type" => "comic book",
-                "artists" => "Rafael Albuquerque",
-                "writers" => "Hope Larson",
+                "artists" => [
+                    "Rafael Albuquerque"
+                ],
+                "writers" => [
+                    "Hope Larson"
+                ],
             ],
             [
                 "title" => "Batman #56",
@@ -67,8 +104,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batman",
                 "sale_date" => "2018-10-03",
                 "type" => "comic book",
-                "artists" => "Tony S. Daniel",
-                "writers" => "Tom King",
+                "artists" => [
+                    "Tony S. Daniel"
+                ],
+                "writers" => [
+                    "Tom King"
+                ],
             ],
             [
                 "title" => "Batman Beyond #1",
@@ -78,8 +119,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batman Beyond",
                 "sale_date" => "2016-10-26",
                 "type" => "comic book",
-                "artists" => "Bernard Chang",
-                "writers" => "Dan Jurgens",
+                "artists" => [
+                    "Bernard Chang"
+                ],
+                "writers" => [
+                    "Dan Jurgens"
+                ],
             ],
             [
                 "title" => "Batman/Superman #1",
@@ -89,8 +134,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batman/Superman",
                 "sale_date" => "2019-08-28",
                 "type" => "comic book",
-                "artists" => "David Marquez",
-                "writers" => "Joshua Williamson",
+                "artists" => [
+                    "David Marquez"
+                ],
+                "writers" => [
+                    "Joshua Williamson"
+                ],
             ],
             [
                 "title" => "Batman/Superman Annual #1",
@@ -100,8 +149,14 @@ class ComicSeeder extends Seeder
                 "series" => "Batman/Superman Annual",
                 "sale_date" => "2020-09-29",
                 "type" => "comic book",
-                "artists" => "Clayton Henry, Gleb Melnikov, Dale Eaglesham",
-                "writers" => "Joshua Williamson",
+                "artists" => [
+                    "Clayton Henry",
+                    "Gleb Melnikov",
+                    "Dale Eaglesham"
+                ],
+                "writers" => [
+                    "Joshua Williamson"
+                ],
             ],
             [
                 "title" => "Batman: The Joker War Zone #1",
@@ -111,8 +166,18 @@ class ComicSeeder extends Seeder
                 "series" => "Batman: The Joker War Zone",
                 "sale_date" => "2020-09-29",
                 "type" => "comic book",
-                "artists" => "Guillem March, Ashley A. Woods, Olivier Coipel, James Stokoe, Darko Lafuente",
-                "writers" => "Sam Johns, Joshua Williamson, John Ridley",
+                "artists" => [
+                    "Guillem March",
+                    "Ashley A. Woods",
+                    "Olivier Coipel",
+                    "James Stokoe",
+                    "Darko Lafuente"
+                ],
+                "writers" => [
+                    "Sam Johns",
+                    "Joshua Williamson",
+                    "John Ridley"
+                ],
             ],
             [
                 "title" => "Batman: Three Jokers #1",
@@ -122,8 +187,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batman: Three Jokers",
                 "sale_date" => "2020-08-25",
                 "type" => "comic book",
-                "artists" => "Jason Fabok",
-                "writers" => "Geoff Johns",
+                "artists" => [
+                    "Jason Fabok"
+                ],
+                "writers" => [
+                    "Geoff Johns"
+                ],
             ],
             [
                 "title" => "Batman: White Knight Presents: Harley Quinn #1",
@@ -133,8 +202,12 @@ class ComicSeeder extends Seeder
                 "series" => "Batman: White Knight Presents: Harley Quinn",
                 "sale_date" => "2020-10-20",
                 "type" => "comic book",
-                "artists" => "Matteo Scalera",
-                "writers" => "Katana Collins",
+                "artists" => [
+                    "Matteo Scalera"
+                ],
+                "writers" => [
+                    "Katana Collins"
+                ],
             ],
             [
                 "title" => "Catwoman Vol. 1: Copycats",
@@ -144,13 +217,20 @@ class ComicSeeder extends Seeder
                 "series" => "Catwoman",
                 "sale_date" => "2019-04-10",
                 "type" => "graphic novel",
-                "artists" => "Fernando Blanco, Joëlle Jones",
-                "writers" => "Joëlle Jones",
+                "artists" => [
+                    "Fernando Blanco",
+                    "Joëlle Jones"
+                ],
+                "writers" => [
+                    "Joëlle Jones"
+                ],
             ],
-        ]; 
+        ];
 
         foreach ($comics as $comic) {
             $new_comic = new Comic();
+            $comic['artists'] = implode(', ', $comic['artists']);
+            $comic['writers'] = implode(', ', $comic['writers']);
             $new_comic->fill($comic); 
             $new_comic->save();
         }
