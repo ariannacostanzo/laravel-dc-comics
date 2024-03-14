@@ -2,6 +2,10 @@ header {
     background-color: white;
     padding: 1rem 0;
 
+    img {
+        width: 80%;
+    }
+
     ul{
     display: flex;
     gap: 35px;
@@ -24,12 +28,6 @@ header {
     justify-content: space-between;
     
 }
-
-img {
-    width: 80%;
-}
-
-
 
 .active {
     color: #0282f9;
