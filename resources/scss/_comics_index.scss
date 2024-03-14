@@ -2,6 +2,7 @@ main {
   color: white;
   font-size: 1.5rem;
   padding: 1.5rem 0;
+  background-color: #1c1c1c;
 
   .label {
   text-transform: uppercase;
@@ -25,7 +26,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  a {
+  a, button {
     text-align: center;
     padding: 12px 40px;
     background-color: #0282f9;
