@@ -9,6 +9,16 @@
 
 <main  id="comic-creation-form">
     <div class="container">
+        @if ($errors->any())
+        <div class="form-arrors">
+            <p>There are errors in the form:</p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>-{{$error}}</li>    
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <form action="{{route('comics.store')}}" method="POST">
             @csrf
             <div class="input-container">

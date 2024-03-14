@@ -1,20 +1,8 @@
 header {
     background-color: white;
     padding: 1rem 0;
-}
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-img {
-    width: 80%;
-}
-
-ul{
+    ul{
     display: flex;
     gap: 35px;
 
@@ -28,6 +16,20 @@ ul{
     }
 
 }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+img {
+    width: 80%;
+}
+
+
 
 .active {
     color: #0282f9;
