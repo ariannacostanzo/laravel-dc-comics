@@ -7,12 +7,7 @@
     <div class="container">
         @if ($errors->any())
         <div class="form-errors">
-            <h4>There are errors in the form:</h4>
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>-{{$error}}</li>    
-                @endforeach
-            </ul>
+            <h4>There are errors in the form</h4>
         </div>
         @endif
         <h2>Update the comic!</h2>
@@ -22,15 +17,30 @@
             <div class="input-group-container">
                 <div class="input-container">
                     <label for="title">Title:</label>
-                    <input type="text" class="comic-input" id="title" name="title" value="{{old('title', "$comic->title")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('title') invalid-input @enderror" id="title" name="title" value="{{old('title', "$comic->title")}}">
+                        @error('title')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="description">Description:</label>
-                    <textarea rows="4" cols="50" class="comic-input" id="description" name="description" >{{old('description', "$comic->description")}}</textarea>
+                    <div>
+                        <textarea rows="4" cols="50" class="comic-input @error('description') invalid-input @enderror" id="description" name="description" >{{old('description', "$comic->description")}}</textarea>
+                        @error('description')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="thumb">Thumb:</label>
-                    <input type="text" class="comic-input" id="thumb" name="thumb" value="{{old('thumb', "$comic->thumb")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('thumb') invalid-input @enderror" id="thumb" name="thumb" value="{{old('thumb', "$comic->thumb")}}">
+                        @error('thumb')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                     <img src="{{$comic->thumb}}" alt="" id="placeholder-thumb" >
                 </div>
             </div>
@@ -38,30 +48,60 @@
 
                 <div class="input-container">
                     <label for="price">Price:</label>
-                    <input type="text" class="comic-input" id="price" name="price" value="{{old('price', "$comic->price")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('price') invalid-input @enderror" id="price" name="price" value="{{old('price', "$comic->price")}}">
+                        @error('price')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="series">Series:</label>
-                    <input type="text" class="comic-input" id="series" name="series" value="{{old('series', "$comic->series")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('series') invalid-input @enderror" id="series" name="series" value="{{old('series', "$comic->series")}}">
+                        @error('series')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="sale_date">Sale date:</label>
-                    <input type="text" class="comic-input" id="sale_date" name="sale_date"  value="{{old('sale_date', "$comic->sale_date")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('sale_date') invalid-input @enderror" id="sale_date" name="sale_date"  value="{{old('sale_date', "$comic->sale_date")}}">
+                        @error('sale_date')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
             </div>
             <div class="input-group-container">
 
                 <div class="input-container">
                     <label for="type">Type:</label>
-                    <input type="text" class="comic-input" id="type" name="type" value="{{old('type', "$comic->type")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('type') invalid-input @enderror" id="type" name="type" value="{{old('type', "$comic->type")}}">
+                        @error('type')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="artists">Artists:</label>
-                    <input type="text" class="comic-input" id="artists" name="artists"  value="{{old('artists', "$comic->artists")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('artists') invalid-input @enderror" id="artists" name="artists"  value="{{old('artists', "$comic->artists")}}">
+                        @error('artists')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="writers">Writers:</label>
-                    <input type="text" class="comic-input" id="writers" name="writers"  value="{{old('writers', "$comic->writers")}}">
+                    <div>
+                        <input type="text" class="comic-input @error('writers') invalid-input @enderror" id="writers" name="writers"  value="{{old('writers', "$comic->writers")}}">
+                        @error('writers')
+                        <p class="error-message">{{$message}}</p>
+                        @enderror
+                    </div>
                 </div>
             </div>
             <div class="btn-div justify-center gap">

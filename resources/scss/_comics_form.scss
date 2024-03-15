@@ -27,15 +27,14 @@
 
     .input-group-container {
         display: flex;
-        align-items: end;
+        align-items: start;
         justify-content: space-between;
         padding: 1rem 0;
-
     }
 
     .input-container {
         display: flex;
-        align-items: center;
+        align-items: start;
         gap: 15px;
     }
 
