@@ -19,6 +19,21 @@ class ComicController extends Controller
             'artists' => 'required|string',
             'writers' => 'required|string',
     ];
+
+    protected $validation_messages = [
+        //required
+        'title.required' => 'Please insert a title',
+        'description.required' => 'Please insert a description',
+        'thumb.required' => 'Please insert a thumb',
+        'price.required' => 'Please insert a price',
+        'series.required' => 'Please insert a series',
+        'sale_date.required' => 'Please insert a sale date',
+        'type.required' => 'Please insert a type',
+        'artists.required' => 'Please insert at least one artist',
+        'writers.required' => 'Please insert at least one writer',
+        //date
+        'sale_date.date' => 'Wrong date format',
+    ];
     /**
      * Display a listing of the resource.
      */
@@ -41,7 +56,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($this->validation_parameters);
+        $request->validate($this->validation_parameters, $this->validation_messages);
         //prendo tutti i dati che mi sono arrivati dal form
         $data = $request->all();
 
@@ -80,7 +95,7 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //validazione
-        $request->validate($this->validation_parameters);
+        $request->validate($this->validation_parameters, $this->validation_messages);
 
         //prendo i dati che mi sono arrivati
         $data = $request->all();

@@ -30,3 +30,14 @@
 
 }
 
+//classe invalid input
+form .comic-input.invalid-input {
+    border: 1px solid red;
+    
+
+}
+
+form .comic-input.valid-input {
+    border: 1px solid green;
+
+}
