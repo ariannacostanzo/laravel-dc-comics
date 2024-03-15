@@ -8,6 +8,17 @@ use App\Models\Comic;
 
 class ComicController extends Controller
 {
+    protected $validation_parameters = [
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'thumb' => 'required|string',
+            'price' => 'required|string',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+    ];
     /**
      * Display a listing of the resource.
      */
@@ -30,17 +41,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string',
-            'description' => 'required|string',
-            'thumb' => 'required|string',
-            'price' => 'required|string',
-            'series' => 'required|string',
-            'sale_date' => 'required|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string',
-        ]);
+        $request->validate($this->validation_parameters);
         //prendo tutti i dati che mi sono arrivati dal form
         $data = $request->all();
 
@@ -78,11 +79,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        //validazione
+        $request->validate($this->validation_parameters);
+
+        //prendo i dati che mi sono arrivati
         $data = $request->all();
         // $comic->fill($data);
         // $comic->save();
+        //fill e save in un comando
         $comic->update($data);
 
+        //redirect su show
         return to_route('comics.show', $comic->id);
     }
 
