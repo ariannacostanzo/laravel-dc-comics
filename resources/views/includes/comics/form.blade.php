@@ -103,11 +103,12 @@
     {{-- cambio buttons in base a create o edit --}}
     @if($comic->exists)
     {{-- edit --}}
-    <a href="{{route('comics.show', $comic->id)}}">Back</a>
+    <a href="{{route('comics.show', $comic->id)}}" class="secondary">Back</a>
     <button type="submit">Save</button>
     @else
     {{-- create --}}
-    <button type="reset">Reset</button>
+    <a href="{{route('comics.index')}}" class="secondary">Back</a>
+    <button type="reset" class="secondary">Reset</button>
     <button type="submit">Create</button>
     @endif   
 </div>

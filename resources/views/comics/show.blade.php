@@ -29,7 +29,7 @@
                 <p class="comic-info-description">{{$comic->description}}</p>
             </div>
             <div class="btn-div justify-between">
-                <a href="{{route('comics.index')}}">See all comics</a>
+                <a href="{{route('comics.index')}}" class="secondary">See all comics</a>
                 <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
             </div>
         </div>
