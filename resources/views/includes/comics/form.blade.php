@@ -2,6 +2,7 @@
 @if($comic->exists) 
 <form action="{{route('comics.update', $comic->id)}}" method="POST">
     @method('PUT')
+{{-- se non ce l'ho --}}
 @else
 <form action="{{route('comics.store')}}" method="POST">
 @endif     
@@ -11,6 +12,7 @@
     <div class="input-container">
         <label for="title">Title:</label>
         <div>
+            {{-- Se ho errori l'input ha la classe invalid, se ho già inviato qualcosa e l'input è valido ha la classe valid, se c'è il comic->value allora lo stampo, altrimenti ho il placeholder, cosi per tutti --}}
             <input type="text" class="comic-input @error('title') invalid-input @elseif(old('title', '')) valid-input @enderror" id="title" name="title" value="{{old('title', "$comic->title")}}" @if(!$comic->exists) placeholder="Es.: Aquaman vol.4: Underworld" @endif>
             @error('title')
             <p class="error-message">{{$message}}</p>
@@ -98,10 +100,13 @@
     </div>
 </div>
 <div class="btn-div justify-center gap">
+    {{-- cambio buttons in base a create o edit --}}
     @if($comic->exists)
+    {{-- edit --}}
     <a href="{{route('comics.show', $comic->id)}}">Back</a>
     <button type="submit">Save</button>
     @else
+    {{-- create --}}
     <button type="reset">Reset</button>
     <button type="submit">Create</button>
     @endif   
