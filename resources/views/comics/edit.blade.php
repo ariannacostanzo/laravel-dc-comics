@@ -16,7 +16,8 @@
         </div>
         @endif
         <h2>Update the comic!</h2>
-        <form action="{{route('comics.store')}}" method="POST">
+        <form action="{{route('comics.update', $comic->id)}}" method="POST">
+            @method('PUT')
             @csrf
             <div class="input-group-container">
                 <div class="input-container">
@@ -64,6 +65,7 @@
                 </div>
             </div>
             <div class="btn-div justify-center gap">
+                <a href="{{route('comics.show', $comic->id)}}">Back</a>
                 <button type="submit">Save</button>
             </div>
         </form>
