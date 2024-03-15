@@ -14,11 +14,14 @@ Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 //rotta per comics create
 Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
 
-//rotta per comics post store
-Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+//rotta per comics edit
+Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
 
 //rotta per comics show
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+//rotta per comics post store
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
 
 
