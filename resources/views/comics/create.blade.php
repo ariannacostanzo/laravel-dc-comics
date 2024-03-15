@@ -7,7 +7,7 @@
 
 @section('main-content')
 
-<div  id="comic-creation-form">
+<div  id="comic-creation-form" class="comic-form">
     <div class="container">
         @if ($errors->any())
         <div class="form-errors">
@@ -86,7 +86,6 @@
 @section('scripts')
 <script>
 
-console.log('Ciao')
 const inputUrl = document.getElementById('thumb');
 const imgPlaceholder = document.getElementById('placeholder-thumb');
 const emptyImg = "https://bub.bh/wp-content/uploads/2018/02/image-placeholder.jpg"

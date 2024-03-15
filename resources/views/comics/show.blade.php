@@ -30,7 +30,7 @@
             </div>
             <div class="btn-div justify-between">
                 <a href="{{route('comics.index')}}">See all comics</a>
-                <a href="{{route('comics.edit', $comic->id)}}">Modify</a>
+                <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
             </div>
         </div>
         <figure class="ad-figure">
