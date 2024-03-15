@@ -9,11 +9,9 @@
 
 <div  id="comic-creation-form" class="comic-form">
     <div class="container">
-        @if ($errors->any())
-        <div class="form-errors">
-            <h4>There are errors in the form</h4>
-        </div>
-        @endif
+        {{-- errors container  --}}
+        @include('includes.comics.errors')
+        
         <h2>Fill the fields to create a new comic!</h2>
         <form action="{{route('comics.store')}}" method="POST">
             @csrf
