@@ -11,6 +11,11 @@
             current series
           </span>
 
+        @session('message')
+        <div class="my-alert">
+          {{$value}}
+        </div>
+        @endsession()
         <div class="row">
             @forelse ($comics as $comic)
                 <div class="card">
