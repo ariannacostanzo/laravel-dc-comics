@@ -31,7 +31,11 @@
             color: #00a9d9;
         }
 
-
+        #delete-close-btn, #restore-close-btn {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+        }
 
         
     }
