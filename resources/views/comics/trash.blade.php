@@ -36,9 +36,8 @@
             @endforelse
         </div>
         
-        <div class="btn-div justify-between">
-          <a href="">See all comics</a>
-          <a href="{{route('comics.create')}}">ADD A NEW COMIC</a>
+        <div class="btn-div justify-center">
+          <a href="{{route('comics.index')}}">See all comics</a>
         </div>
 
       </div>

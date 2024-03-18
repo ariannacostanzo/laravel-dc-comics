@@ -43,7 +43,12 @@
                 <p class="comic-info-description">{{$comic->description}}</p>
             </div>
             <div class="btn-div justify-between">
+                @if($isTrashed)
+                <a href="{{route('comics.trash')}}" class="secondary">See all deleted comics</a>
+                <a href="" class="success">restore</a>
+                @else
                 <a href="{{route('comics.index')}}" class="secondary">See all comics</a>
+                @endif
                 
                 <button class="danger" id="delete-btn">Delete</button>
                 

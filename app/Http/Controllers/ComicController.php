@@ -78,7 +78,8 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('comics.show', compact('comic'));
+        $isTrashed = $comic->trashed();
+        return view('comics.show', compact('comic', 'isTrashed'));
     }
 
     /**
@@ -118,6 +119,16 @@ class ComicController extends Controller
     }
 
     public function trash() {
+        $comics = Comic::onlyTrashed()->get();
+        return view('comics.trash', compact('comics'));
+    }
+
+    public function restore() {
+        $comics = Comic::onlyTrashed()->get();
+        return view('comics.trash', compact('comics'));
+    }
+
+    public function drop() {
         $comics = Comic::onlyTrashed()->get();
         return view('comics.trash', compact('comics'));
     }
