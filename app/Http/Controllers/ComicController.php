@@ -116,4 +116,9 @@ class ComicController extends Controller
         $comic->delete();
         return to_route('comics.index')->with('message', "$comic->title was successfully deleted!");
     }
+
+    public function trash() {
+        $comics = Comic::onlyTrashed()->get();
+        return view('comics.trash', compact('comics'));
+    }
 }

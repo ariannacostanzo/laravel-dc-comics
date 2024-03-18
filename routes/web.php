@@ -14,6 +14,10 @@ Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 //rotta per comics create
 Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
 
+//rotta per deleted comics
+
+Route::get('/comics/trash', [ComicController::class, 'trash'])->name('comics.trash');
+
 //rotta per comics edit
 Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
 

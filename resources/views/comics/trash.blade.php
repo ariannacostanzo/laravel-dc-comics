@@ -37,7 +37,7 @@
         </div>
         
         <div class="btn-div justify-between">
-          <a href="{{route('comics.trash')}}" class="secondary">See deleted comics</a>
+          <a href="">See all comics</a>
           <a href="{{route('comics.create')}}">ADD A NEW COMIC</a>
         </div>
 
