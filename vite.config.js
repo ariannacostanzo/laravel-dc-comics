@@ -11,7 +11,7 @@ export default defineConfig({
             input: [
                 "resources/scss/app.scss",
                 "resources/js/app.js",
-                "resources/js/form/preview_img.js",
+                "resources/js/preview_img.js",
                 "resources/js/modal.js",
             ],
             refresh: true,

@@ -29,7 +29,7 @@
 @endsection
 
 @section('scripts')
-<script>
+{{-- <script>
 
 const inputUrl = document.getElementById('thumb');
 const imgPlaceholder = document.getElementById('placeholder-thumb');
@@ -41,6 +41,7 @@ inputUrl.addEventListener('input', () => {
 
 });
 
-</script>
+</script> --}}
+@vite('resources/js/preview_img.js')
 
 @endsection

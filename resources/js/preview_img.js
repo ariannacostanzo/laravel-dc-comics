@@ -1,9 +1,11 @@
 const inputUrl = document.getElementById("thumb");
+
 const imgPlaceholder = document.getElementById("placeholder-thumb");
-const emptyImg =
-    "https://bub.bh/wp-content/uploads/2018/02/image-placeholder.jpg";
+
+const emptyImg = "https://bub.bh/wp-content/uploads/2018/02/image-placeholder.jpg";
 
 inputUrl.addEventListener("input", () => {
-    typedUrl = inputUrl.value;
+    const typedUrl = inputUrl.value;
+    console.log(typedUrl)
     imgPlaceholder.src = typedUrl ? typedUrl : emptyImg;
 });
