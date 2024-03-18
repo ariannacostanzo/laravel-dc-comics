@@ -114,6 +114,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('comics.index')->with('message', "$comic->title successfully deleted!");
+        return to_route('comics.index')->with('message', "$comic->title was successfully deleted!");
     }
 }

@@ -2,6 +2,10 @@
 
 @section('title', 'Comics')
 
+@section('cdns')
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' integrity='sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==' crossorigin='anonymous'/>
+@endsection
+
 @section('main-content')
 
 <main>
@@ -14,8 +18,9 @@
         @session('message')
         <div class="my-alert">
           {{$value}}
+          <button class="close-btn" id="close-alert"><i class="fa-solid fa-x"></i></button>
         </div>
-        @endsession()
+        @endsession
         <div class="row">
             @forelse ($comics as $comic)
                 <div class="card">
@@ -42,4 +47,10 @@
 
 @section('bonus')
 @include('includes.bonus')
+@endsection
+
+@section('scripts')
+<script>
+@vite('resources/js/close-alert.js')
+</script>
 @endsection

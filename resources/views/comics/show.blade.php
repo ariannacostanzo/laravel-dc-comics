@@ -12,7 +12,7 @@
         <p>
             Are you sure you want to delete the comic <strong>{{$comic->title}}</strong> ?
         </p>
-        <button id="close-btn"><i class="fa-solid fa-x"></i></button>
+        <button id="close-btn" class="close-btn"><i class="fa-solid fa-x"></i></button>
         <form class="btn-div justify-between" action="{{route('comics.destroy', $comic->id)}}" method="POST" id="confirm-delete">
                 @csrf
                 @method('DELETE')
