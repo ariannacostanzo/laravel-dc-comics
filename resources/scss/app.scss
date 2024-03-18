@@ -1,6 +1,5 @@
 @use 'reset';
 @use 'generics';
-@use 'utils';
 @use 'header';
 @use 'jumbotron';
 @use 'footer';
@@ -8,6 +7,7 @@
 @use 'comics_index';
 @use 'comics_show';
 @use 'comics_form';
+@use 'utils';
 
 body {
     visibility: visible;

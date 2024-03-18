@@ -7,16 +7,18 @@
 @endsection
 
 @section('main-content')
-<div class="my-modal-layout">
+<div class="my-modal-layout d-none">
     <div class="my-modal">
         <p>
             Are you sure you want to delete the comic <strong>{{$comic->title}}</strong> ?
         </p>
         <button id="close-btn"><i class="fa-solid fa-x"></i></button>
-        <div class="btn-div justify-between">
-            <button id="confirm-btn">Confirm</button>
-            <button id="cancel-btn" class="secondary">Cancel</button>
-        </div>
+        <form class="btn-div justify-between" action="{{route('comics.destroy', $comic->id)}}" method="POST" id="confirm-delete">
+                @csrf
+                @method('DELETE')
+        <button id="confirm-btn" type="submit">Confirm</button>
+        <button id="cancel-btn" class="secondary" type="button">Cancel</button>
+        </form>
     </div>
 </div>
 <div class="blue-line"></div>
@@ -42,11 +44,9 @@
             </div>
             <div class="btn-div justify-between">
                 <a href="{{route('comics.index')}}" class="secondary">See all comics</a>
-                <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button class="danger">Delete</button>
-                </form>
+                
+                <button class="danger" id="delete-btn">Delete</button>
+                
                 <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
             </div>
         </div>
@@ -113,4 +113,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+@vite('resources/js/modal.js')
 @endsection
