@@ -109,7 +109,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Move resource to trash.
+     * Move resource to soft deleted.
      */
     public function destroy(Comic $comic)
     {
@@ -127,7 +127,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Restore the resource.
+     * Restore the resource from soft deleted.
      */
     public function restore(Comic $comic)
     {
