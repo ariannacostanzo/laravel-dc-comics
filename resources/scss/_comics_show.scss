@@ -1,3 +1,54 @@
+.my-modal-layout {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+
+    .my-modal {
+        background-color: white;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        border: 5px solid  #0282f9;
+        padding: 1.5rem 1.5rem;
+        position: relative;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            margin-top: 2rem;
+        }
+
+        strong {
+            color: #00a9d9;
+        }
+
+        #close-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background-color: transparent;
+            font-size: 20px;
+        }
+
+        
+    }
+}
+
 .blue-line {
         background-color: #0282f9;
         height: 80px;
@@ -57,7 +108,7 @@
 }
 
 .comic-description {
-    flex-grow: 0;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

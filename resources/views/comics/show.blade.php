@@ -7,6 +7,18 @@
 @endsection
 
 @section('main-content')
+<div class="my-modal-layout">
+    <div class="my-modal">
+        <p>
+            Are you sure you want to delete the comic <strong>{{$comic->title}}</strong> ?
+        </p>
+        <button id="close-btn"><i class="fa-solid fa-x"></i></button>
+        <div class="btn-div justify-between">
+            <button id="confirm-btn">Confirm</button>
+            <button id="cancel-btn" class="secondary">Cancel</button>
+        </div>
+    </div>
+</div>
 <div class="blue-line"></div>
 {{-- descrizione comic --}}
 <div class="container smaller" id="comic-details">
