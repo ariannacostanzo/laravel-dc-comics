@@ -18,8 +18,9 @@ Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.c
 Route::get('/comics/trash', [ComicController::class, 'trash'])->name('comics.trash');
 
 //rotta per restore
-Route::patch('/comics/{comic}/restore', [ComicController::class, 'restore'])->name('comics.restore');
-Route::delete('/comics/{comic}/drop', [ComicController::class, 'drop'])->name('comics.drop');
+Route::patch('/comics/{comic}/restore', [ComicController::class, 'restore'])->name('comics.restore')->withTrashed();
+
+// Route::delete('/comics/{comic}/drop', [ComicController::class, 'drop'])->name('comics.drop');
 
 
 //rotta per comics edit

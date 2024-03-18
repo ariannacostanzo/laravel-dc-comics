@@ -45,7 +45,11 @@
             <div class="btn-div justify-between">
                 @if($isTrashed)
                 <a href="{{route('comics.trash')}}" class="secondary">See all deleted comics</a>
-                <a href="" class="success">restore</a>
+                <form action="{{route('comics.restore', $comic->id)}}" method="POST">
+                    @csrf 
+                    @method('PATCH')
+                    <button class="success">restore</button>
+                </form>
                 @else
                 <a href="{{route('comics.index')}}" class="secondary">See all comics</a>
                 @endif

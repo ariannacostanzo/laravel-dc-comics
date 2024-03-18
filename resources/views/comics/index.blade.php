@@ -32,7 +32,7 @@
                     <p>{{$comic->series}}</p>
                 </div>
               @empty
-              Non ci sono fumetti da mostrare
+              There are no comics to show
             @endforelse
         </div>
         

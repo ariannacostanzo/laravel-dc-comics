@@ -9,15 +9,15 @@ use App\Models\Comic;
 class ComicController extends Controller
 {
     protected $validation_parameters = [
-            'title' => 'required|string',
-            'description' => 'required|string',
-            'thumb' => 'required|string',
-            'price' => 'required|string',
-            'series' => 'required|string',
-            'sale_date' => 'required|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string',
+        'title' => 'required|string',
+        'description' => 'required|string',
+        'thumb' => 'required|string',
+        'price' => 'required|string',
+        'series' => 'required|string',
+        'sale_date' => 'required|date',
+        'type' => 'required|string',
+        'artists' => 'required|string',
+        'writers' => 'required|string',
     ];
 
     protected $validation_messages = [
@@ -118,18 +118,21 @@ class ComicController extends Controller
         return to_route('comics.index')->with('message', "$comic->title was successfully deleted!");
     }
 
-    public function trash() {
+    public function trash()
+    {
         $comics = Comic::onlyTrashed()->get();
         return view('comics.trash', compact('comics'));
     }
 
-    public function restore() {
-        $comics = Comic::onlyTrashed()->get();
-        return view('comics.trash', compact('comics'));
+    public function restore(Comic $comic)
+    {
+        $comic->restore();
+
+        return to_route('comics.index')->with('message', "$comic->title was successfully restored!");
     }
 
-    public function drop() {
-        $comics = Comic::onlyTrashed()->get();
-        return view('comics.trash', compact('comics'));
-    }
+    // public function drop() {
+    //     $comics = Comic::onlyTrashed()->get();
+    //     return view('comics.trash', compact('comics'));
+    // }
 }
