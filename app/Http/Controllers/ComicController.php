@@ -78,6 +78,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
+        //una variabile d'appoggio che mi serve per cambiare certe logiche all'interno di show
         $isTrashed = $comic->trashed();
         return view('comics.show', compact('comic', 'isTrashed'));
     }
@@ -100,8 +101,6 @@ class ComicController extends Controller
 
         //prendo i dati che mi sono arrivati
         $data = $request->all();
-        // $comic->fill($data);
-        // $comic->save();
         //fill e save in un comando
         $comic->update($data);
 
@@ -110,7 +109,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Move resource to trash.
      */
     public function destroy(Comic $comic)
     {
@@ -118,12 +117,18 @@ class ComicController extends Controller
         return to_route('comics.index')->with('message', "$comic->title was successfully deleted!");
     }
 
+    /**
+     * Show the soft deleted resources.
+     */
     public function trash()
     {
         $comics = Comic::onlyTrashed()->get();
         return view('comics.trash', compact('comics'));
     }
 
+    /**
+     * Restore the resource.
+     */
     public function restore(Comic $comic)
     {
         $comic->restore();
@@ -131,8 +136,12 @@ class ComicController extends Controller
         return to_route('comics.index')->with('message', "$comic->title was successfully restored!");
     }
 
-    // public function drop() {
-    //     $comics = Comic::onlyTrashed()->get();
-    //     return view('comics.trash', compact('comics'));
-    // }
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function drop(Comic $comic)
+    {
+        $comic->forceDelete();
+        return to_route('comics.trash')->with('message', "$comic->title was deleted completely!");
+    }
 }
