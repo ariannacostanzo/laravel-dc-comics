@@ -26,7 +26,8 @@ Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.
 //rotta per comics post store
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
-
+//rotta peer comics destroy
+Route::delete('/comics/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');
 
 //rotta statica per gli altri
 

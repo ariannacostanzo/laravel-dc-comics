@@ -30,6 +30,11 @@
             </div>
             <div class="btn-div justify-between">
                 <a href="{{route('comics.index')}}" class="secondary">See all comics</a>
+                <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="danger">Delete</button>
+                </form>
                 <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
             </div>
         </div>
